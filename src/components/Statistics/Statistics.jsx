@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-export const Statistics = ({ title, stats }) => {
+export const Statistics = ({ data }) => {
+   const { title, stats } = data;
   return (
-    <section class="statistics">
+        <section class="statistics">
       {title && <h2 class="title">{title}</h2>}
 
       <ul class="stat-list">
