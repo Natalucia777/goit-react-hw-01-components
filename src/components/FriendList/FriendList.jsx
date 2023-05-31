@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 export const FriendList = ({ friends }) => {
-  const { avatar, name, isOnline } = friends;
+  const { avatar, name, isOnline, id } = friends;
   return (
-    <ul class="friend-list">
+    <ul class="friend-list" className={id}>
       <li class="item">
         <span class="status">{isOnline}</span>
         <img class="avatar" src={avatar} alt="User avatar" width="48" />
@@ -15,7 +15,9 @@ export const FriendList = ({ friends }) => {
 };
 
 Profile.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.string.isRequired,
+  friends: PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.string.isRequired,
+  }).isRequired,
 };

@@ -21,7 +21,6 @@ export const App = () => {
         color: '#010101',
       }}
     >
-
       <Profile
         username={user.username}
         tag={user.tag}

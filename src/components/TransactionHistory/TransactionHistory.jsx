@@ -6,23 +6,18 @@ export const TransactionHistory = ({ transactions }) => {
   return (
     <table class="transaction-history">
       <thead>
-        <tr>{ id }
-          <th>Type { type }</th>
-          <th>Amount { amount }</th>
-          <th>Currency { currency }</th>
+        <tr>
+          <th>Type </th>
+          <th>Amount </th>
+          <th>Currency </th>
         </tr>
       </thead>
 
       <tbody>
-        <tr>
-          <td>Invoice</td>
-          <td>125</td>
-          <td>USD</td>
-        </tr>
-        <tr>
-          <td>Withdrawal</td>
-          <td>85</td>
-          <td>USD</td>
+        <tr key={id}>
+          <td>{ type }</td>
+          <td>{ amount }</td>
+          <td>{ currency }</td>
         </tr>
       </tbody>
     </table>
@@ -30,8 +25,12 @@ export const TransactionHistory = ({ transactions }) => {
 };
 
 Profile.propTypes = {
-  id: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  amount: PropTypes.number.isRequired,
-  currency: PropTypes.string.isRequired,
+  transactions: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
 };
