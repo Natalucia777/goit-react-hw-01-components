@@ -1,17 +1,18 @@
 import React from "react";
 import PropTypes from 'prop-types';
+// import { startTransition } from "react";
 
 const colors = ['#00BFFF', '#6900C6', '#FF0000', '#00FF00', '#FFFF00'];
-export const Statistics = ({ data }) => {
-   const { title, stats } = data;
+export const Statistics = ({ title, stats }) => {
+  // const { title, stats } = data;
   return (
-        <section class="statistics">
-      {title && <h2 class="title">{title}</h2>}
-      <ul class="stat-list">
+        <section className="statistics">
+      {title && <h2 className="title">{title}</h2>}
+      <ul className="stat-list">
         {stats.map(({ id, label, percentage }, colorId) => (
-          <li class="item" key={id} style={{ background: colors[colorId] }}> 
-          <span class="label">{label}</span>
-          <span class="percentage">{percentage}</span>
+          <li className="item" key={id} style={{ background: colors[colorId] }}> 
+          <span className="label">{label}</span>
+          <span className="percentage">{percentage}</span>
         </li>
         ))}
       </ul>
@@ -20,7 +21,7 @@ export const Statistics = ({ data }) => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from 'prop-types';
+// import transactions from '../../path/to/transactions.json';
 
 export const TransactionHistory = ({ transactions }) => {
   const { id, type, amount, currency } = transactions;
   return (
-    <table class="transaction-history">
+    <table className="transaction-history">
       <thead>
         <tr>
           <th>Type </th>
@@ -14,23 +15,23 @@ export const TransactionHistory = ({ transactions }) => {
       </thead>
 
       <tbody>
-        <tr key={id}>
-          <td>{ type }</td>
-          <td>{ amount }</td>
-          <td>{ currency }</td>
-        </tr>
+            <tr key={id}>
+              <td>{type}</td>
+              <td>{amount}</td>
+              <td>{currency}</td>
+            </tr>
       </tbody>
     </table>
   );
 };
 
-Profile.propTypes = {
+TransactionHistory.propTypes = {
   transactions: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
       type: PropTypes.string.isRequired,
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
-    })
-  ),
+    }).isRequired
+  ).isRequired,
 };
