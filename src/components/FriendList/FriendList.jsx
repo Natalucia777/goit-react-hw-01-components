@@ -1,15 +1,20 @@
-import React from "react";
+// import React from "react";
 import PropTypes from 'prop-types';
+import styles from './FriendList.module.css';
+import { FriendListItem } from './FriendListItem/FriendListItem';
 
 export const FriendList = ({ friends }) => {
-  const { id, avatar, name, isOnline, } = friends;
+  // const { id, avatar, name, isOnline, } = friends;
   return (
-    <ul className="friend-list" rey={id}>
-      <li className="item">
-        <span className="status">{isOnline}</span>
-        <img className="avatar" src={avatar} alt="User avatar" width="48" />
-        <p className="name">{name}</p>
-      </li>
+    <ul className={styles.friendList}>
+
+      <FriendListItem
+        key={id}
+        isOnline={isOnline}
+        avatar={avatar}
+        name={name}
+      />  
+      
     </ul>
   );
 };
@@ -21,6 +26,6 @@ FriendList.propTypes = {
     avatar: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     isOnline: PropTypes.bool.isRequired,
-    }).isRequired
-  ).isRequired,
+    })
+  ),
 };
