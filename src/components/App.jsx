@@ -9,7 +9,7 @@ import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 import user from 'path/user';
 import data from 'path/data';
 import friends from 'path/friends';
-import transactions from 'path/transactions';
+import transactions from '../path/transactions';
 
 export const App = () => {
   return (
@@ -23,7 +23,7 @@ export const App = () => {
       />
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />;
-      <TransactionHistory items={transactions} />;
+      <TransactionHistory transactions={transactions} />;
     </Container>
   );
 };
