@@ -1,0 +1,35 @@
+.profile {
+background-color: #fff;
+width: 400px;
+padding: 0;
+margin: 10px 10 px 40px 0px;
+}
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.avatar {
+width: 300px;
+height: 300px;
+padding: 10px;
+}
+p.name {
+  /* font-size: 24 px; */
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+.tag {
+  /* font-size: 18 px; */
+  margin-bottom: 5px;
+}
+.location {
+  margin-bottom: 10px;
+}
+.stats {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 80px;
+}
