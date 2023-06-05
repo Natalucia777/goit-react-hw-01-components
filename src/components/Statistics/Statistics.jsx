@@ -1,11 +1,8 @@
-// import React from "react";
 import PropTypes from 'prop-types';
 import styles from './Statistics.module.css';
-// import { startTransition } from "react";
 
 const colors = ['#00BFFF', '#6900C6', '#FF0000', '#00FF00', '#FFFF00'];
 export const Statistics = ({ title, stats }) => {
-  // const { title, stats } = data;
   return (
     <section className={styles.statistics}>
       {title && <h2 className={styles.title}>{title}</h2>}

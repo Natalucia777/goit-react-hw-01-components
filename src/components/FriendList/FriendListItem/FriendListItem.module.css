@@ -1,0 +1,31 @@
+.item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px #a1abb6, 1px 1px 3px #a1abb6; 
+  width: 280px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.statusOnLine {
+  width: 5px;
+  height: 5px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: green;
+}
+.statusOfLine {
+  width: 5px;
+  height: 5px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: crimson;
+}
+.avatar {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  border-radius: 8px;
+  background-color: #e4e9f0;
+}

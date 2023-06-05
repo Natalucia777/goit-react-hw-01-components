@@ -1,0 +1,23 @@
+.transactionHistory {
+  width: 800px;
+  height: fit-content;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border-color: #a1abb6;
+}
+.title {
+height: 40px;
+background-color: #abdff5;
+color: #fff;
+padding: 10px;
+text-transform: uppercase;
+}
+.quantity {
+  height: 40px;
+  text-align: center;
+  padding: 10px;
+}
+.line:nth-child(even) {
+background-color: #e7ecf0;
+}
